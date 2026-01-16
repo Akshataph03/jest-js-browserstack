@@ -95,20 +95,4 @@ describe("BStack demo test Module B", () => {
     await driver.get("https://bstackdemo.com");
     await driver.wait(until.titleMatches(/StackDemo/i), 10000);
   }, 10000);
-
-  test("Test with framework-level retry - 2 retries configured", async () => {
-    jest.retryTimes(2);
-    const randomOutcome = Math.random() > 0.7; // 30% chance of passing
-    if (!randomOutcome) {
-      throw new Error("Test failed, retrying...");
-    }
-  });
-
-  test("Another Test with framework-level retry - 2 retries configured", async () => {
-    jest.retryTimes(2);
-    const randomOutcome = Math.random() > 0.7; // 30% chance of passing
-    if (!randomOutcome) {
-      throw new Error("Test failed, retrying...");
-    }
-  });
 });

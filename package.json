@@ -28,3 +28,4 @@
     "postinstall": "npm update browserstack-node-sdk"
   }
 }
+
